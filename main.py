@@ -38,11 +38,6 @@ number_of_turns = 1
 user_num = input("Enter a number between 1-100 for the computer to guess: ")
 user_num = int(user_num)
 
-while user_num < 1 and user_num > 100:
-    print("Invalid number!")
-    user_num = input("Now guess a number between 1-100: ")
-    user_num = int(user_num)
-
 comp_num = random.randint(1, 100)
 greater_comp_num = 100
 lower_comp_num = 1
