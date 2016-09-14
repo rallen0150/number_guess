@@ -7,7 +7,7 @@ comp_num = random.randint(1, 100)
 
 user_num = 0
 
-while user_num != comp_num:
+while number_of_turns < 5:
 
     user_num = input("Guess a number between 1-100: ")
     user_num = int(user_num)
@@ -29,7 +29,7 @@ while user_num != comp_num:
         number_of_turns += 1
         break
 
-print ("It took you ", number_of_turns, "to get the correct number")
+print ("It took you ", number_of_turns, "turns")
 
 # Hard Part and Very Hard Part
 

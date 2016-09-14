@@ -17,7 +17,7 @@ lower_comp_num = 1
 while user_num != comp_num:
 
     if comp_num > user_num:
-        if (comp_num - 5) <= user_num:
+        if (comp_num - user_num) <= 5:
             number_of_turns += 1
             print("You are greater than the my number but within 5 numbers")
             greater_comp_num = comp_num
@@ -25,10 +25,10 @@ while user_num != comp_num:
         print(comp_num, "this number is greater than my number")
         number_of_turns += 1
         greater_comp_num = comp_num
-        comp_num = random.randint(lower_comp_num, greater_comp_num)
+        comp_num = random.randint(lower_comp_num, greater_comp_num-1)
 
     elif comp_num < user_num:
-        if (comp_num + 5) >= user_num:
+        if (user_num - comp_num) >= 5:
             number_of_turns += 1
             print("You are smaller than the my number but within 5 numbers")
             lower_comp_num = comp_num
@@ -36,7 +36,7 @@ while user_num != comp_num:
         print(comp_num, "this number is smaller than my number")
         number_of_turns += 1
         lower_comp_num = comp_num
-        comp_num = random.randint(lower_comp_num, greater_comp_num)
+        comp_num = random.randint(lower_comp_num+1, greater_comp_num)
 
     else:
         print("You guessed my number!")
